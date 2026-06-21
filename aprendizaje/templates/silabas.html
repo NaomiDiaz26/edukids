@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}EduKids - Sílabas{% endblock %}
+
+{% block active_silabas %}active{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <h1>¡Aprende <span>Sílabas!</span></h1>
+        <p>Descubre nuevas sílabas con imágenes divertidas. ¡Haz clic para escuchar cómo suenan!</p>
+    </div>
+
+    <div class="container">
+        <h2>¿Cómo funciona?</h2>
+        <p>Haz clic en cualquier tarjeta para escuchar la pronunciación de la sílaba. ¡Cada imagen te ayudará a recordar mejor!</p>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 style="text-align:center; color: var(--accent);">Letras y Sílabas Básicas</h2>
+
+            <div class="syllables fila-1">
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/ma.png' %}" alt="MA">
+                    <button class="secondary" onclick="playAudio('audio-ma')">MA</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/me.png' %}" alt="ME">
+                    <button class="secondary" onclick="playAudio('audio-me')">ME</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/mi.png' %}" alt="MI">
+                    <button class="secondary" onclick="playAudio('audio-mi')">MI</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/mo.png' %}" alt="MO">
+                    <button class="secondary" onclick="playAudio('audio-mo')">MO</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/mu.png' %}" alt="MU">
+                    <button class="secondary" onclick="playAudio('audio-mu')">MU</button>
+                </div>
+            </div>
+
+            <div class="syllables fila-2">
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/pa.png' %}" alt="PA">
+                    <button class="secondary" onclick="playAudio('audio-pa')">PA</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/pe.png' %}" alt="PE">
+                    <button class="secondary" onclick="playAudio('audio-pe')">PE</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/pi.png' %}" alt="PI">
+                    <button class="secondary" onclick="playAudio('audio-pi')">PI</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/po.png' %}" alt="PO">
+                    <button class="secondary" onclick="playAudio('audio-po')">PO</button>
+                </div>
+                <div class="syll-card">
+                    <img src="{% static 'imagenes/pu.png' %}" alt="PU">
+                    <button class="secondary" onclick="playAudio('audio-pu')">PU</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <h3>Combinaciones</h3>
+            <p>Las sílabas se forman combinando consonantes con vocales.</p>
+        </div>
+        <div class="card">
+            <h3>Visual</h3>
+            <p>Las imágenes te ayudan a recordar cada sílaba.</p>
+        </div>
+        <div class="card">
+            <h3>Audio</h3>
+            <p>Escucha la pronunciación correcta de cada sílaba.</p>
+        </div>
+        <div class="card">
+            <h3>Memoria</h3>
+            <p>Repite las sílabas para mejorar tu memoria.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>¡Ya conoces las sílabas!</h2>
+        <p>Ahora es momento de usar lo que aprendiste para formar palabras completas.</p>
+        <button class="btn-main" onclick="window.location.href='{% url 'palabras' %}'">Formar Palabras</button>
+    </div>
+
+    <audio id="audio-ma" src="{% static 'audios/ma.mp3' %}"></audio>
+    <audio id="audio-me" src="{% static 'audios/me.mp3' %}"></audio>
+    <audio id="audio-mi" src="{% static 'audios/mi.mp3' %}"></audio>
+    <audio id="audio-mo" src="{% static 'audios/mo.mp3' %}"></audio>
+    <audio id="audio-mu" src="{% static 'audios/mu.mp3' %}"></audio>
+    <audio id="audio-pa" src="{% static 'audios/pa.mp3' %}"></audio>
+    <audio id="audio-pe" src="{% static 'audios/pe.mp3' %}"></audio>
+    <audio id="audio-pi" src="{% static 'audios/pi.mp3' %}"></audio>
+    <audio id="audio-po" src="{% static 'audios/po.mp3' %}"></audio>
+    <audio id="audio-pu" src="{% static 'audios/pu.mp3' %}"></audio>
+{% endblock %}
+

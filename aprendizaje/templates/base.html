@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}EduKids - Aprende Jugando{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"/>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EduKids</div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}" class="{% block active_index %}{% endblock %}">Inicio</a>
+            <a href="{% url 'letras' %}" class="{% block active_letras %}{% endblock %}">Letras</a>
+            <a href="{% url 'silabas' %}" class="{% block active_silabas %}{% endblock %}">Sílabas</a>
+            <a href="{% url 'palabras' %}" class="{% block active_palabras %}{% endblock %}">Palabras</a>
+			<a href="{% url 'progreso' %}">Mi Progreso</a>
+			<a href="{% url 'logout' %}">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>EduKids</h3>
+                <p>Una plataforma educativa diseñada para hacer el aprendizaje divertido e interactivo para niños.</p>
+            </div>
+
+            <div class="footer-section center">
+                <h3>Características</h3>
+                <p>Sonidos de letras</p>
+                <p>Pronunciación de sílabas</p>
+                <p>Juegos de palabras</p>
+                <p>Diseño intuitivo</p>
+            </div>
+
+            <div class="footer-section right">
+                <h3>¡Aprende!</h3>
+                <p>Descubre el mundo de las letras, sílabas y palabras de manera divertida.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+

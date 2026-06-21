@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}EduKids - Inicio{% endblock %}
+
+{% block active_index %}active{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <h1>¡Bienvenidos a <span>EduKids!</span></h1>
+        <p>
+            Una plataforma educativa diseñada para que los niños aprendan letras, sílabas
+            y palabras de forma divertida e interactiva. ¡Prepárate para descubrir una
+            nueva aventura de aprendizaje!
+        </p>
+        <button class="btn-main" onclick="window.location.href='{% url 'letras' %}'">
+            ¡Comenzar a Aprender! 🎉
+        </button>
+    </div>
+
+    <h2 class="cards-title">¿Qué puedes hacer aquí?</h2>
+    <div class="cards-container">
+        <div class="card" onclick="window.location.href='{% url 'letras' %}'">
+            <h3>Aprende Letras</h3>
+            <p>Descubre cada letra del alfabeto con sonidos divertidos.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='{% url 'silabas' %}'">
+            <h3>Sílabas Jugando</h3>
+            <p>Combina sílabas con imágenes coloridas.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='{% url 'palabras' %}'">
+            <h3>Forma Palabras</h3>
+            <p>Actividad interactiva de arrastrar y soltar.</p>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h2>¡Explora, Aprende y Diviértete! 🎉</h2>
+        <p>
+            Nuestro sitio educativo está diseñado para crear una experiencia de aprendizaje 
+            interactiva y divertida. Cada sección está pensada en el mejor desarrollo 
+            pedagógico para los pequeños aprendices.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">
+                <h4>Interactivo</h4>
+                <p>Aprende con actividades dinámicas.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Educativo</h4>
+                <p>Contenido pedagógicamente diseñado.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Divertido</h4>
+                <p>Aprender nunca fue tan divertido.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

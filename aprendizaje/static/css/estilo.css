@@ -1,0 +1,586 @@
+/* css/estilo.css - estilos globales */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7ebff;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #6a00ff;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: .2s ease;
+    color: #555;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: #e0c1ff;
+    color: black;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.header h1 span {
+    color: #d600ff;
+}
+
+.header p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-box {
+    width: 70%;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin: 60px auto;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+
+/* Sección inferior */
+.info-box {
+    width: 70%;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin: 60px auto;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+.info-box h2 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.features {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    width: 150px;
+}
+
+.feature-item h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.feature-item p {
+    font-size: 13px;
+    color: #666;
+}
+
+.container{
+  width: 70%;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin: 60px auto;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+.btn-main {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ff00d4, #a900ff);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(170, 0, 255, 0.3);
+}
+
+/* Sección de tarjetas */
+.cards-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.card {
+    width: 230px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    /* Nueva distribución */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    width: 33%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Centrar la sección del medio */
+.footer-section.center {
+    text-align: center;
+}
+
+/* Alinear derecha la última sección */
+.footer-section.right {
+    text-align: right;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section.right h3 {
+    justify-content: flex-end;
+}
+
+/* Header / Nav (consistent across pages) */
+header{
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  background: white;
+}
+
+/* Sections per wireframe look */
+.section {
+  background:#fff;
+  margin-top:18px;
+  padding:20px;
+  border:1px solid rgba(0,0,0,0.04);}
+
+/* Grid of letter buttons */
+.grid-letters{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
+  gap:16px;
+  justify-items:center;
+  padding:12px 6px;
+}
+
+.letter-btn{
+  width:120px;
+  height:70px;
+  border-radius:10px;
+  background:var(--btn);
+  border:none;
+  font-size:34px;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.letter-btn:hover{
+  background:var(--btn-hover);
+}
+
+/* TITULO */
+.titulo {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.titulo h1 {
+    font-size: 40px;
+}
+
+.titulo h1 span {
+    color: #ff48b0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+}
+
+/* COLUMNAS */
+.col-izquierda {
+    flex: 1.2; /* Más ancho para el formulario */
+}
+
+.col-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+    }
+}
+
+
+/* TARJETAS */
+.tarjeta {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO */
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.btn-enviar {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(90deg,#ff48b0,#b74bff);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* INFORMACIÓN */
+.info .item {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+/* OPINIÓN */
+.opinion {
+    background: linear-gradient(90deg,#b74bff,#ff48b0);
+    color: white;
+    text-align: center;
+}
+
+.opinion .estrellas {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+/* SABIAS QUE */
+.datos ul {
+    list-style: none;
+}
+
+.datos li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+button.primary{
+  background: linear-gradient(90deg, #ff00d4, #a900ff);;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+  font-weight:700;
+  cursor:pointer;}
+
+button.secondary{
+  background:var(--btn);
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+button.primary:hover{
+  background:#007a7a;
+}
+
+button.secondary:hover{
+  background:var(--btn-hover);
+}
+
+/* Contenedor general de sílabas */
+.syllables{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  padding:12px;
+}
+
+/* Tarjetas */
+.syll-card{
+  width:150px;
+  background:#f7ebff;
+  border-radius:10px;
+  padding:12px;
+  text-align:center;
+}
+
+.syll-card img{
+  width:100%;
+  height:96px;
+  object-fit:contain;
+  border-radius:6px;
+}
+
+.syll-card button{
+  margin-top:8px;
+}
+
+/* Drag & drop area */
+.drag-area{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:center;
+  padding:12px;
+}
+
+.draggable{
+  width:120px;
+  height:56px;
+  border-radius:8px;
+  background:#f7ebff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  cursor:grab;
+}
+
+.drop-target{
+  width:80%;
+  min-height:80px;
+  border:3px dashed var(--accent);border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fafafa;
+  padding:14px;}
+  
+.tabla-progreso{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.tabla-progreso th{
+    background:#6c3df4;
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+.tabla-progreso td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.tabla-progreso tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.tabla-progreso tr:hover{
+    background:#ece6ff;
+}
+
+.barra-contenedor{
+    width:100%;
+    max-width:700px;
+    margin:30px auto;
+    background:#ddd;
+    height:45px;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.barra-progreso{
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #6c3df4,
+        #3f7cff
+    );
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    line-height:45px;
+    transition:all .5s ease;
+}
+
+/* --- MEJORAS PARA FORMULARIOS DE INICIO Y REGISTRO --- */
+
+/* Contenedor del formulario interno para centrar su contenido */
+.formulario-estilizado {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left; /* Alinea los labels e inputs a la izquierda */
+}
+
+/* Espaciado para cada bloque de label + input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.formulario-estilizado label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Forzamos a que los inputs generados por Django tomen el diseño interactivo */
+.formulario-estilizado input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0c1ff; /* Bordes suaves acordes a EduKids */
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box; /* Evita que el padding deforme el ancho */
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el niño o el tutor hacen clic en el input */
+.formulario-estilizado input:focus {
+    border-color: #a900ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(169, 0, 255, 0.2);
+}
+
+/* Enlace a "Regístrate aquí" estilizado */
+.link-secundario {
+    color: #a900ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link-secundario:hover {
+    text-decoration: underline;
+}
+
+/* Alertas de error estéticas en rojo amigable */
+.error-texto {
+    color: #ff3b3b;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+.error-alerta {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffe5e5;
+    color: #cc0000;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ffa3a3;
+    font-weight: 600;
+}
+

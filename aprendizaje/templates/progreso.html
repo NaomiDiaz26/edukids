@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Mi Progreso{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <h1 style="text-align:center;">Mi Progreso</h1>
+
+    <p style="text-align:center;">
+        Has completado <strong>{{ palabras_correctas }}</strong> de <strong>{{ total_palabras }}</strong> palabras.
+    </p>
+
+    <p style="text-align:center; font-size:20px; margin-bottom: 15px;">
+        {% if porcentaje < 25 %}
+            🌱 ¡Estás comenzando!
+        {% elif porcentaje < 50 %}
+            📚 ¡Vas muy bien!
+        {% elif porcentaje < 75 %}
+            ⭐ ¡Excelente progreso!
+        {% elif porcentaje < 100 %}
+            🏆 ¡Ya casi terminas!
+        {% else %}
+            🎉 ¡Felicidades! Has completado todas las palabras.
+        {% endif %}
+    </p>
+
+    <div class="barra-contenedor">
+        <div class="barra-progreso" style="width: {{ porcentaje }}%;">
+            {{ porcentaje }}%
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+        <h3>{{ palabras_correctas }} / {{ total_palabras }}</h3>
+        <p>Palabras completadas</p>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}EduKids - Letras{% endblock %}
+
+{% block active_letras %}active{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <h1>¡Descubre las <span>Letras!</span></h1>
+        <p>Una forma divertida de aprender el alfabeto.</p>
+    </div>
+
+    <div class="container">
+        <h2>Instrucciones</h2>
+        <p>Presiona cualquier letra para escuchar su sonido.</p>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 style="text-align:center; color: var(--accent);">Aprendamos las letras</h2>
+            <div class="grid-letters">
+                <button class="letter-btn" onclick="playAudio('audio-a')">A</button>
+                <button class="letter-btn" onclick="playAudio('audio-b')">B</button>
+                <button class="letter-btn" onclick="playAudio('audio-c')">C</button>
+                <button class="letter-btn" onclick="playAudio('audio-d')">D</button>
+                <button class="letter-btn" onclick="playAudio('audio-e')">E</button>
+                <button class="letter-btn" onclick="playAudio('audio-f')">F</button>
+                <button class="letter-btn" onclick="playAudio('audio-g')">G</button>
+                <button class="letter-btn" onclick="playAudio('audio-h')">H</button>
+                <button class="letter-btn" onclick="playAudio('audio-i')">I</button>
+                <button class="letter-btn" onclick="playAudio('audio-j')">J</button>
+                <button class="letter-btn" onclick="playAudio('audio-k')">K</button>
+                <button class="letter-btn" onclick="playAudio('audio-l')">L</button>
+                <button class="letter-btn" onclick="playAudio('audio-m')">M</button>
+                <button class="letter-btn" onclick="playAudio('audio-n')">N</button>
+                <button class="letter-btn" onclick="playAudio('audio-ñ')">Ñ</button>
+                <button class="letter-btn" onclick="playAudio('audio-o')">O</button>
+                <button class="letter-btn" onclick="playAudio('audio-p')">P</button>
+                <button class="letter-btn" onclick="playAudio('audio-q')">Q</button>
+                <button class="letter-btn" onclick="playAudio('audio-r')">R</button>
+                <button class="letter-btn" onclick="playAudio('audio-s')">S</button>
+                <button class="letter-btn" onclick="playAudio('audio-t')">T</button>
+                <button class="letter-btn" onclick="playAudio('audio-u')">U</button>
+                <button class="letter-btn" onclick="playAudio('audio-v')">V</button>
+                <button class="letter-btn" onclick="playAudio('audio-w')">W</button>
+                <button class="letter-btn" onclick="playAudio('audio-x')">X</button>
+                <button class="letter-btn" onclick="playAudio('audio-y')">Y</button>
+                <button class="letter-btn" onclick="playAudio('audio-z')">Z</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <h3>¡27 Letras!</h3>
+            <p>El alfabeto español tiene 27 letras incluyendo la Ñ.</p>
+        </div>
+        <div class="card">
+            <h3>Sonidos Únicos</h3>
+            <p>Cada letra tiene su propio sonido especial.</p>
+        </div>
+        <div class="card">
+            <h3>Aprende Jugando</h3>
+            <p>La mejor forma de aprender es divirtiéndose.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>¡Ya conoces las letras!</h2>
+        <p>Ahora es momento de aprender a combinar letras para formar sílabas.</p>
+        <button class="btn-main" onclick="window.location.href='{% url 'silabas' %}'">
+            ¡Continua con las Sílabas!
+        </button>
+    </div>
+
+    <audio id="audio-a" src="{% static 'audios/a.mp3' %}"></audio>
+    <audio id="audio-b" src="{% static 'audios/b.mp3' %}"></audio>
+    <audio id="audio-c" src="{% static 'audios/c.mp3' %}"></audio>
+    <audio id="audio-d" src="{% static 'audios/d.mp3' %}"></audio>
+    <audio id="audio-e" src="{% static 'audios/e.mp3' %}"></audio>
+    <audio id="audio-f" src="{% static 'audios/f.mp3' %}"></audio>
+    <audio id="audio-g" src="{% static 'audios/g.mp3' %}"></audio>
+    <audio id="audio-h" src="{% static 'audios/h.mp3' %}"></audio>
+    <audio id="audio-i" src="{% static 'audios/i.mp3' %}"></audio>
+    <audio id="audio-j" src="{% static 'audios/j.mp3' %}"></audio>
+    <audio id="audio-k" src="{% static 'audios/k.mp3' %}"></audio>
+    <audio id="audio-l" src="{% static 'audios/l.mp3' %}"></audio>
+    <audio id="audio-m" src="{% static 'audios/m.mp3' %}"></audio>
+    <audio id="audio-n" src="{% static 'audios/n.mp3' %}"></audio>
+    <audio id="audio-ñ" src="{% static 'audios/ñ.mp3' %}"></audio>
+    <audio id="audio-o" src="{% static 'audios/o.mp3' %}"></audio>
+    <audio id="audio-p" src="{% static 'audios/p.mp3' %}"></audio>
+    <audio id="audio-q" src="{% static 'audios/q.mp3' %}"></audio>
+    <audio id="audio-r" src="{% static 'audios/r.mp3' %}"></audio>
+    <audio id="audio-s" src="{% static 'audios/s.mp3' %}"></audio>
+    <audio id="audio-t" src="{% static 'audios/t.mp3' %}"></audio>
+    <audio id="audio-u" src="{% static 'audios/u.mp3' %}"></audio>
+    <audio id="audio-v" src="{% static 'audios/v.mp3' %}"></audio>
+    <audio id="audio-w" src="{% static 'audios/w.mp3' %}"></open>
+    <audio id="audio-x" src="{% static 'audios/x.mp3' %}"></audio>
+    <audio id="audio-y" src="{% static 'audios/y.mp3' %}"></audio>
+    <audio id="audio-z" src="{% static 'audios/z.mp3' %}"></audio>
+{% endblock %}
+

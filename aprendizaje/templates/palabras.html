@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% csrf_token %}
+
+{% block title %}EduKids - Formar Palabras{% endblock %}
+
+{% block active_palabras %}active{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <h1>¡Forma la <span>Palabra</span> correcta!</h1>
+        <p>Aprende jugando mientras refuerzas tu comprensión lectora y tu habilidad para reconocer estructuras básicas del idioma.</p>
+    </div>
+
+    <div class="container">
+        <h2>¿Qué hacer?</h2>
+        <p>Arrastra las sílabas hasta el recuadro y ordénalas correctamente para formar la palabra.</p>
+    </div>
+
+<div class="container">
+    <section class="section">
+        <h2 style="text-align:center; color:var(--accent);">¡Forma una palabra!</h2>
+
+        <div class="drag-area" style="gap:12px;">
+            <div style="display:flex; gap:12px; justify-content:center; margin-bottom: 8px;">
+                <div id="syll-ma" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="ma">MA</div>
+                <div id="syll-me" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="me">ME</div>
+                <div id="syll-mi" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="mi">MI</div>
+                <div id="syll-mo" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="mo">MO</div>
+                <div id="syll-mu" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="mu">MU</div>
+            </div>
+
+            <div style="display:flex; gap:12px; justify-content:center;">
+                <div id="syll-pa" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="pa">PA</div>
+                <div id="syll-pe" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="pe">PE</div>
+                <div id="syll-pi" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="pi">PI</div>
+                <div id="syll-po" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="po">PO</div>
+                <div id="syll-pu" class="draggable" draggable="true" ondragstart="drag(event)" data-syllable-id="pu">PU</div>
+            </div>
+
+            <div id="drop-palabra" class="drop-target" ondrop="drop(event)" ondragover="allowDrop(event)">
+                Suelta aquí
+            </div>
+
+            <div style="display:flex; gap:12px; justify-content:center; margin-top:12px;">
+                <button class="primary" onclick="comprobarEjercicio()">Comprobar</button>
+                <button class="secondary" onclick="reiniciarTablero()">Borrar palabra</button>
+            </div>
+
+            <div id="resultado-palabra" style="text-align:center; margin-top:12px; font-weight:700; font-size: 1.2rem;"></div>
+        </div>
+    </section>
+</div>
+{% endblock %}
