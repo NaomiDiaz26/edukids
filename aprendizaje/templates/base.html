@@ -19,11 +19,11 @@
         <a href="{% url 'silabas' %}" class="{% block active_silabas %}{% endblock %}">Sílabas</a>
         <a href="{% url 'palabras' %}" class="{% block active_palabras %}{% endblock %}">Palabras</a>
 
-        {% if user.is_authenticated %}
-            <a href="{% url 'progreso' %}">Mi Progreso</a>
-            <a href="{% url 'logout' %}">Cerrar sesión</a>
+         {% if request.session.usuario_id %}
+               <a href="{% url 'progreso' %}">Mi Progreso</a>
+               <a href="{% url 'logout' %}">Cerrar sesión</a>
         {% else %}
-            <a href="{% url 'login' %}">Iniciar sesión</a>
+               <a href="{% url 'login' %}">Iniciar sesión</a>
         {% endif %}
     </div>
 </nav>
