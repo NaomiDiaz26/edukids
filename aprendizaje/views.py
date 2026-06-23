@@ -138,18 +138,19 @@ def progreso(request):
 
     usuario_id = request.session.get('usuario_id')
 
-    usuario = Usuario.objects.get(id=usuario_id)
-
-    actividad = Actividad.objects.get(
-        nombre_actividad='Palabras'
-    )
-
-    palabras_correctas = Progreso.objects.filter(
-        usuario=usuario,
-        actividad=actividad
-    ).count()
-
     TOTAL_PALABRAS = 28
+
+    with connection.cursor() as cursor:
+
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM vw_progreso_usuarios
+            WHERE usuario_id = %s
+            AND actividad = 'Palabras'
+            AND resultado = 'Correcto'
+        """, [usuario_id])
+
+        palabras_correctas = cursor.fetchone()[0]
 
     porcentaje = min(
         round((palabras_correctas / TOTAL_PALABRAS) * 100),
