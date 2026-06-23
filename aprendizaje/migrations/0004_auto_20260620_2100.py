@@ -41,18 +41,19 @@ class Migration(migrations.Migration):
         EXECUTE FUNCTION registrar_historial();
 
         -- VIEW
-        CREATE OR REPLACE VIEW vw_progreso_usuarios AS
-        SELECT
-            u.id AS usuario_id,
-            u.nombre AS usuario,
-            a.nombre_actividad AS actividad,
-            p.resultado,
-            p.fecha_realizacion
-        FROM aprendizaje_progreso p
-        INNER JOIN aprendizaje_usuario u
-            ON p.usuario_id = u.id
-        INNER JOIN aprendizaje_actividad a
-            ON p.actividad_id = a.id;
+       CREATE OR REPLACE VIEW vw_progreso_usuarios AS
+       SELECT
+          u.id AS usuario_id,
+          u.nombre AS usuario,
+          a.nombre_actividad AS actividad,
+          p.palabra,
+          p.resultado,
+          p.fecha_realizacion
+       FROM aprendizaje_progreso p
+       INNER JOIN aprendizaje_usuario u
+          ON p.usuario_id = u.id
+       INNER JOIN aprendizaje_actividad a
+       ON p.actividad_id = a.id;
 
         """)
     ]
