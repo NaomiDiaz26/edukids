@@ -8,7 +8,6 @@ from .decorators import login_requerido
 from django.db import connection
 
 # Create your views here.
-@login_requerido
 def inicio(request):
     return render(request, 'index.html')
 
